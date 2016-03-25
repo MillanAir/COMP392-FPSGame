@@ -17,8 +17,7 @@
     "Scripts/lib"
   ],
   "dependencies": {
-    "three.js": "threejs#*",
-    "dat-gui": "~0.5.1",
+    "three.js": "threejs#*",    
     "stats.js": "*",
     "Physijs": "physijs#*",
     "EaselJS": "^0.8.2",
