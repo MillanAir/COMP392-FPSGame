@@ -80,10 +80,10 @@ var game = (function () {
     var scoreValue;
     var livesValue;
     var manifest = [
-        { id: "land", src: "../../Assets/audio/Land.wav" },
-        { id: "hit", src: "../../Assets/audio/hit.wav" },
+        { id: "land", src: "../../Assets/audio/land.mp3" },
+        { id: "hit", src: "../../Assets/audio/hit.mp3" },
         { id: "coin", src: "../../Assets/audio/coin.mp3" },
-        { id: "jump", src: "../../Assets/audio/Jump.wav" }
+        { id: "jump", src: "../../Assets/audio/jump.mp3" }
     ];
     function preload() {
         assets = new createjs.LoadQueue();
@@ -243,16 +243,6 @@ var game = (function () {
         // create parent-child relationship with camera and player
         player.add(camera);
         camera.position.set(0, 1, 0);
-        // Sphere Object
-        sphereGeometry = new SphereGeometry(2, 32, 32);
-        sphereMaterial = Physijs.createMaterial(new LambertMaterial({ color: 0x00ff00 }), 0.4, 0);
-        sphere = new Physijs.SphereMesh(sphereGeometry, sphereMaterial, 1);
-        sphere.position.set(0, 60, 5);
-        sphere.receiveShadow = true;
-        sphere.castShadow = true;
-        sphere.name = "Sphere";
-        //scene.add(sphere);
-        //console.log("Added Sphere to Scene");
         // Add framerate stats
         addStatsObject();
         console.log("Added Stats to scene...");
