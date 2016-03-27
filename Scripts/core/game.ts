@@ -353,9 +353,9 @@ var game = (() => {
         
         coins = new Array<Physijs.ConvexMesh>(); // Instantiate a convex mesh array
 
-        var coinLoader = new THREE.JSONLoader().load("../../Assets/imported/coin.json", function(geometry: THREE.Geometry) {
-            var phongMaterial = new PhongMaterial({ color: 0xE7AB32 });
-            phongMaterial.emissive = new THREE.Color(0xE7AB32);
+        var coinLoader = new THREE.JSONLoader().load("../../Assets/imported/orb.json", function(geometry: THREE.Geometry) {
+            var phongMaterial = new PhongMaterial({ color: 0xADA9E7 });
+            phongMaterial.emissive = new THREE.Color(0xADA9E7);
             
             var coinMaterial = Physijs.createMaterial((phongMaterial), 0.4, 0.6);
             
